@@ -1,0 +1,7 @@
+zone/*
+.vscode/*
+node_modules/*
+.git/*
+*.zip
+*.rar
+*.tar.gz

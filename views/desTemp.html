@@ -1,0 +1,271 @@
+<!DOCTYPE HTML!>
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="maximum-scale=1.0, user-scalable=no">
+    <title>MYMUSIC.COM/SOK</title>
+    <link href="/desPage/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/desPage/style/index.css" rel="stylesheet" />
+    <link href="/desPage/images/icon.png" rel="icon" type="image/x-icon" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script language="javascript" src="/desPage/js/index.js"></script>
+    <script language="javascript" src="/desPage/js/Move3.js"></script>
+    <script type="text/javascript" src="/desPage/js/template-web.js"></script>
+    <!--歌手部分-->
+    <script id="geshou" type="text/html">
+        {{each arrSingers value i}}
+        <dd class="singer">
+            <i>{{i+1}}.</i>
+            <span>{{arrSingers[i]}}</span>
+        </dd>
+        {{/each}}
+    </script>
+    
+    <!--歌曲部分-->
+    <script id="gequ" type="text/html">
+        {{each gequData value i}}
+        <dd class="song">
+            <b>{{i+1}}</b>
+            <p>{{gequData[i].name}}</p>
+            <div>{{gequData[i].musician}}</div>
+        </dd>
+        {{/each}}
+    </script>
+    
+    <!--歌词部分-->
+    <script id="geci" type="text/html">
+        {{each arrLRC value i}}
+        <dd class="lyric">
+            {{arrLRC[i].lyric}}
+        </dd>
+        {{/each}}
+    </script>
+</head>
+<body>
+    <div id="filter"></div>
+    <div id="body-content">
+        <div id="top-empty">
+            <div id="top-empty-left">
+                <h2>MUSIC.COM/SOK</h2>
+            </div>
+            <div id="top-empty-right">
+                <div id="PSD">
+                    <span>mymusic</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="top-menu">
+	        <div id="top-menu-columu"><b>HotColumn</b></div>
+            <dl>
+                <dd>首页</dd>
+                <dd>曲库</dd>
+                <dd>我的音乐</dd>
+                <dd>播放页</dd>
+                <dd>搜索</dd>
+            </dl>
+	    </div>
+        
+        <div id="content">
+            <dl id="content-dl">
+                <dd class="visbPage">首页</dd>
+                <dd class="visbPage">
+                    <div id="singersTop">
+                        <dl id="singers">
+                            <!--
+                            <dd class="singer">
+                                <i>1.</i>
+                                <span>邓紫棋</span>
+                            </dd>
+                            <dd class="singer">
+                                <i>2.</i>
+                                <span>周杰伦</span>
+                            </dd>
+                            <dd class="singer">
+                                <i>3.</i>
+                                <span>徐梦圆</span>
+                            </dd>
+                            -->
+                        </dl>
+                    </div>
+                    
+                    <dl id="songs">
+                        <!--
+                        <dd class="song">
+                            <b>1.</b>
+                            <p>句号</p>
+                            <div>G.E.M.邓紫棋</div>
+                        </dd>
+                        <dd class="song">
+                            <b>2.</b>
+                            <p>画 (Live Piano Session II)</p>
+                            <div>G.E.M.邓紫棋</div>
+                        </dd>
+                        <dd class="song">
+                            <b>3.</b>
+                            <p>光年之外</p>
+                            <div>G.E.M.邓紫棋</div>
+                        </dd>
+                        -->
+                    </dl>
+                </dd>
+                <dd class="visbPage">我的音乐标签页</dd>
+                <dd class="visbPage">
+                    <div id="playPageMeg" class="song_meg">
+                        <div id="play-meg-name" class="song_name">音乐的名字</div>
+                        <div id="play-meg-author" class="song_author">艺术家</div>
+                    </div>
+                    <div id="playPageCont">
+                        <div id="playPageImg">
+                            <div id="imgBox">
+                                <img src="https://p1.music.126.net/KTo5oSxH3CPA5PBTeFKDyA==/109951164581432409.jpg">
+                            </div>
+                        </div>
+                        <div id="playPageLrc">
+                            <dl id="lyrics">
+                                <dd>"mymusic"——音乐小站</dd>
+                                <dd>(请到曲库选择音乐播放)</dd>
+                                <!--
+                                <dd class="lyric">作词:G.E.M. 邓紫棋</dd>
+                                <dd class="lyric">作曲:G.E.M. 邓紫棋</dd>
+                                <dd class="lyric">可惜我们终于来到   一个句号</dd>
+                                <dd class="lyric">窗外不愿飞的蜂鸟   也在哀悼</dd>
+                                <dd class="lyric">城市再也不会听到   我们争吵</dd>
+                                <dd class="lyric">你会不会少了一点烦恼</dd>
+                                <dd class="lyric">回到十二年前   回忆就在眼前</dd>
+                                <dd class="lyric">你带着帽子   而我样子   带着腼腆</dd>
+                                <dd class="lyric">不过第一次的见面   你说   你有先见</dd>
+                                <dd class="lyric">我的先天   被训练过   我能有片天</dd>
+                                <dd class="lyric">我当时天真   寡见鲜闻</dd>
+                                <dd class="lyric">不像成年人   有能力辨认</dd>
+                                <dd class="lyric">不是为了赚了有钱分   我为我的前程</dd>
+                                <dd class="lyric">希望我写的歌里面有更好的和弦声</dd>
+                                <dd class="lyric">时针滴滴答   你还记得吗</dd>
+                                <dd class="lyric">说句心里话   你还怀念吗</dd>
+                                <dd class="lyric">第一次发唱片   就一马当先</dd>
+                                <dd class="lyric">从此在大场面   我不再站旁边</dd>
+                                <dd class="lyric">我是真的感谢   佩服你的眼界</dd>
+                                <dd class="lyric">怎么想到和你是带着刺痛地完结</dd>
+                                <dd class="lyric">你看着一朵花慢慢萌芽</dd>
+                                <dd class="lyric">我却看着你意气慢慢风发</dd>
+                                <dd class="lyric">欲望聚沙成塔   价值慢慢分岔</dd>
+                                <dd class="lyric">太多失望让我对你的信任慢慢崩塌</dd>
+                                <dd class="lyric">可惜我们终于来到   一个句号</dd>
+                                <dd class="lyric">窗外不愿飞的蜂鸟   也在哀悼</dd>
+                                <dd class="lyric">城市再也不会听到   我们争吵</dd>
+                                <dd class="lyric">你会不会少了一点烦恼</dd>
+                                <dd class="lyric">时针滴滴答   你还记得吗</dd>
+                                <dd class="lyric">说句心里话   你还怀念吗</dd>
+                                <dd class="lyric">你说我是个商品   没有你我就不可以</dd>
+                                <dd class="lyric">这些扭曲的真理   差点毁掉我的自信</dd>
+                                <dd class="lyric">如今的我已觉醒   如今我不再哭泣</dd>
+                                <dd class="lyric">再不怕坚持自己   做你没做对的决定</dd>
+                                <dd class="lyric">你知道吗   这一辈子除了我的爸爸</dd>
+                                <dd class="lyric">你曾是我最信任的男人吧</dd>
+                                <dd class="lyric">但空白的娃娃   总会慢慢长大</dd>
+                                <dd class="lyric">抱歉我没法永远当你听话的傻瓜</dd>
+                                <dd class="lyric">可惜我们终于来到   一个句号</dd>
+                                <dd class="lyric">窗外不愿飞的蜂鸟   也在哀悼</dd>
+                                <dd class="lyric">城市再也不会听到   我们争吵</dd>
+                                <dd class="lyric">你会不会少了一点烦恼</dd>
+                                <dd class="lyric">多少年里   多少遍你</dd>
+                                <dd class="lyric">多少错却没多少歉意</dd>
+                                <dd class="lyric">但过去了就不再介意</dd>
+                                <dd class="lyric">把珍贵的放心里</dd>
+                                <dd class="lyric">把痛的伤的全都忘记</dd>
+                                <dd class="lyric">我青春的全部回忆</dd>
+                                <dd class="lyric">那爱的恨的全都是你</dd>
+                                <dd class="lyric">希望你偶尔也会想起</dd>
+                                <dd class="lyric">就让我真心真意</dd>
+                                <dd class="lyric">把歌唱完重新开始</dd>
+                                <dd class="lyric">时针滴滴答   你还记得吗</dd>
+                                <dd class="lyric">说句心里话   你还怀念吗</dd>
+                                <dd class="lyric">制作人 Producer：G.E.M.邓紫棋, T-Ma 马敬恒</dd>
+                                <dd class="lyric">编曲 Arranged by：G.E.M.邓紫棋, T-Ma 马敬恒</dd>
+                                <dd class="lyric">和音 Bvox：G.E.M.邓紫棋</dd>
+                                <dd class="lyric">混音 Mixed by : Richard Furch</dd>
+                                <dd class="lyric">母带 Mastered by : Randy Merrill @ Sterling Sound</dd>
+                                -->
+                            </dl>
+                        </div>
+                    </div>
+                    <div id="playPageBottom">
+                        <div id="playPageBottom_deal">
+                            <div id="songShowSomething"></div>
+                            <div id="songDealPlace">
+                                <b class="heart"><i class="fa fa-heart" aria-hidden="true"></i></b>
+                                <b class="download"><i class="fa fa-download" aria-hidden="true"></i></b>
+                                <b class="comments"><i class="fa fa-comment" aria-hidden="true"></i></b>
+                                <b class="ellipsis"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></b>
+                            </div>
+                            <div id="songScheduleShow">
+                                <div id="playTime">00:00</div>
+                                <div id="parentBar">
+                                    <div id="sonPlayBar">      <div id="handle"></div></div>
+                                </div>
+                                <div id="duration">nm:ns</div>
+                            </div>
+                        </div>
+                        <div id="playPageBottom_ctrl">
+                            <b class="playType"><i class="fa fa-random"></i></b>
+                            <b class="lastSong"><i class="fa fa-step-backward"></i></b>
+                            <b class="playBtn"><i class="fa fa-play-circle"></i></b>
+                            <b class="nextSong"><i class="fa fa-step-forward"></i></b>
+                            <b class="songList"><i class="fa fa-list-ul"></i></b>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="visbPage">
+                    其他页标签页
+                    <div style="font-size:40px;">
+                        <i class="fa fa-search"></i>
+                        <i class="far fa-pause-circle"></i>
+                        <i class="far fa-play-circle"></i>
+                        <i class="fas fa-step-forward"></i>
+                        <i class="fas fa-step-backward"></i>
+                        <i class="far fa-stop-circle"></i>
+                        
+                        <i class="fa fa-random"></i>
+                        <i class="fa fa-sync-alt"></i>
+                        <i class="fa fa-undo"></i>
+                        <i class="fa fa-volume-up"></i>
+                        <i class="fa fa-redo"></i>
+                        
+                        <span>列表图标</span>
+                        <i class="fas fa-list"></i>
+                        <i class="fas fa-list-ul"></i>
+                        <i class="fas fa-list-alt"></i>
+                        
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        
+        <!--底部播放控件-->
+        <div id="play">
+            
+            <!--底部歌曲信息显示-->
+            <div id="song-show">
+                <!--class名用于绑定事件，动态添加数据-->
+                <div id="song-img" class="song_img">
+                    <img src="https://p1.music.126.net/KTo5oSxH3CPA5PBTeFKDyA==/109951164581432409.jpg">
+                </div>
+                <div id="song-meg" class="song_meg">
+                    <div id="song-meg-name" class="song_name">音乐的名字</div>
+                    <div id="song-meg-author" class="song_author">艺术家</div>
+                </div>
+            </div>
+             <!--底部歌曲控制   -->
+            <div id="song-ctrl">
+                <b class="lastSong"><i class="fa fa-step-backward"></i></b>
+                <b class="playBtn"><i class="fa fa-play-circle"></i></b>
+                <b class="nextSong"><i class="fa fa-step-forward"></i></b>
+            </div>         
+        </div>
+        <audio id="myAudio">
+            <source type="audio/mpeg" src="http://music.163.com/song/media/outer/url?id=1405283464.mp3">
+        </audio>
+    </div>
+</body>
+</html>
